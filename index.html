@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- WAJIB agar responsive bekerja -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAMDBAL - Pilih Project</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e7f7ec, #d9f0e0, #c8e8d2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-wrapper {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 26px 30px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+            border: 1px solid rgba(255,255,255,0.55);
+        }
+
+        .brand-logo {
+            display: block;
+            width: 230px;
+            max-width: 70%;
+            margin: 0 auto -15px auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+            color: #2f4d39;
+            margin-bottom: 10px;
+        }
+
+        .desc-text {
+            text-align: center;
+            font-size: 15px;
+            color: #4d6c57;
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            line-height: 1.5;
+        }
+
+        .container {
+            display: grid;
+            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 26px;
+            border-radius: 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.55);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            color: #4b59ff;
+        }
+
+        .title-card {
+            font-size: 19px;
+            font-weight: 600;
+            color: #1d1f25;
+            margin-bottom: 8px;
+        }
+
+        .desc {
+            font-size: 14px;
+            color: #434955;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .main-wrapper {
+                padding: 20px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .desc-text {
+                font-size: 14px;
+            }
+        }
+
+        @media(max-width: 380px){
+            .brand-logo { width: 150px; }
+            .title { font-size: 22px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="main-wrapper">
+
+    <img src="SAMDBAL.png" class="brand-logo" alt="SAMDBAL Logo">
+
+    <div class="title">SAMDBAL - Sistem Monitoring Sampah Digital</div>
+
+    <p class="desc-text">
+        Kelola data sampah, AI, ML, dan IoT secara modern dan efisien dalam satu ekosistem digital.
+        Pilih project yang ingin kamu buka.
+    </p>
+
+    <div class="container">
+
+        <div class="card" onclick="window.open('https://chatbot-coba.vercel.app','_blank')">
+    <div class="icon">🤖</div>
+    <div class="title-card">Chatbot</div>
+    <div class="desc">Sistem percakapan AI yang dibuat dengan React.</div>
+</div>
+
+
+        <div class="card" onclick="window.open('https://huggingface.co/spaces/bayuskraa1/volumesampah','_blank')">
+            <div class="icon">🛠️</div>
+            <div class="title-card">Machine Learning</div>
+            <div class="desc">Model prediksi yang di deploy dengan backend Python.</div>
+        </div>
+
+        <div class="card" onclick="location.href='https://dashboard-monitoringsampah-362p.vercel.app/'">
+            <div class="icon">📊</div>
+            <div class="title-card">IoT Dashboard</div>
+            <div class="desc">Monitoring IoT secara real-time.</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
